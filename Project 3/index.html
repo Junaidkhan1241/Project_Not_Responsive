@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            display: flex;
+            width: 100%;
+            height: 8vh;
+            justify-content: space-evenly;
+            align-items: center;
+            /* border: 2px solid green; */
+            background-color: #000;
+        }
+
+        header .logo {
+            /* border: 2px solid yellow; */
+            position: relative;
+            left: -60px;
+        }
+
+        header .logo h3 {
+            text-decoration: overline;
+            text-decoration-color: rgb(255, 255, 5);
+            color: rgb(255, 255, 5);
+            text-decoration-thickness: 3px;
+        }
+
+        header nav {
+            padding: 5px;
+            /* border: 2px solid red; */
+            height: 6vh;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+
+
+        nav ul li a {
+            padding: 5px 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+
+        }
+
+        .btn {
+            background-color: rgb(255, 255, 5);
+            margin-left: 20px;
+            color: #000;
+            padding: 5px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .hero {
+            height: 91vh;
+            width: 100%;
+            /* border: 2px solid red; */
+            display: flex;
+            padding: 20px 100px;
+            background-color: #000;
+
+        }
+
+        .hero .text {
+            width: 50%;
+            height: 50vh;
+            margin-top: 110px;
+            margin-left: 40px;
+
+        }
+
+        .hero .text h1 {
+            color: white;
+            font-size: 30px;
+
+
+        }
+
+        p {
+            color: rgb(129, 126, 126);
+            margin-top: 10px;
+        }
+
+        .hero .text button {
+            margin-top: 20px;
+            margin-left: -5px;
+            padding: 10px 30px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+        .hero .img {
+            width: 50%;
+            margin: 5px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero .img img {
+            border-radius: 10px;
+        }
+
+        /* section 1 css */
+        .section-1 {
+            width: 100%;
+            height: 150vh;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px 100px;
+            background-color: #111111;
+            color: #fff;
+
+        }
+
+        .section-1 .heading {
+            width: 100%;
+        }
+
+        h4 {
+            text-align: center;
+            margin-top: 10px;
+            color: rgb(255, 255, 5);
+
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+
+        .section-1 .item-box {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .section-1 .item-box .items {
+            /* border: 2px solid red; */
+            padding: 20px 40px;
+            margin-top: 20px;
+            max-height: 450px;
+            max-width: 350px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .section-1 .item-box .items img {
+            border-radius: 100%;
+            width: 80px;
+            height: 60px;
+            background-color: rgb(255, 255, 5);
+        }
+
+        .section-1 .item-box .items p {
+            margin-top: 5px;
+            color: rgb(129, 126, 126);
+            /* text-align: justify; */
+            letter-spacing: 0px;
+
+
+        }
+
+
+
+        .crypto {
+            width: 100%;
+        }
+
+        .crypto img {
+            position: relative;
+            top: 6px;
+
+        }
+
+        table {
+            margin-top: 30px;
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        th {
+            color: rgb(255, 255, 5);
+            /* border: 1px solid white; */
+        }
+
+        td {
+            text-align: center;
+            /* border: 1px solid white; */
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        tr {
+            border-bottom: 2px solid rgb(255, 255, 5);
+            height: 60px;
+        }
+
+        table tr td .arrow {
+            width: 25px;
+        }
+
+        tr span {
+            position: relative;
+            left: 20px;
+            font-size: 11px;
+        }
+
+        .green-text {
+            color: rgb(23, 226, 23);
+
+        }
+
+        .red-text {
+            color: red;
+        }
+
+
+        .section-2 {
+            width: 100%;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+        }
+
+        .section-2 .img {
+            width: 40%;
+            background-image: url(Images/bitcoin-trade.PNG);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .section-2 .img img {
+            width: 400px;
+            height: 400px;
+        }
+
+        .section-2 .text {
+            width: 60%;
+            padding: 10px 30px;
+        }
+
+        .section-2 .text .text-box {
+            display: flex;
+        }
+
+        .section-2 .text .text-box p {
+            margin-top: 20px;
+            margin-right: 30px;
+            border-radius: 5px;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+
+        }
+
+        .section-3 {
+            margin-top: 0px;
+            width: 100%;
+            height: 110vh;
+            background-color: #111111;
+            color: #fff;
+            padding: 10px 100px;
+
+        }
+
+        .section-3 .heading h3 {
+            text-align: center;
+            margin-top: 30px;
+
+        }
+
+        .section-3 .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+        }
+
+        .section-3 .container .text-boxs {
+            /* border: 2px solid red; */
+            border-radius: 10px;
+            width: 500px;
+            padding: 30px 50px;
+            height: 270px;
+            margin-right: 30px;
+            margin-top: 30px;
+            background-color: rgba(18, 18, 152, 0.1);
+
+        }
+
+        .section-3 .container .text-boxs p {
+            margin-top: 10px;
+            color: rgb(129, 126, 126);
+
+        }
+
+        .section-4 {
+            width: 100%;
+            height: 175vh;
+            background-color: #111111;
+            color: #fff;
+            padding: 10px 100px;
+
+        }
+
+        .section-4 .top h1 {
+            text-align: center;
+
+        }
+
+        .section-4 .top h5 {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .section-4 .top p {
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+
+        .section-4 .feature-box {
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            align-items: center;
+
+        }
+
+        .feature-items {
+            width: 400px;
+            /* border: 2px solid green; */
+            border-radius: 10px;
+            width: 500px;
+            padding: 30px 50px;
+            height: 250px;
+            margin-right: 20px;
+            margin-top: 20px;
+            background-color: rgba(18, 18, 152, 0.1);
+
+        }
+
+        h3 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .section-5 {
+            width: 100%;
+            height: 70vh;
+            background-color: #111;
+            color: #fff;
+            /* border: 2px solid yellow; */
+
+        }
+
+        .step {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 50px;
+            margin-left: 20px;
+            margin-right: 20px;
+            /* border: 2px solid green; */
+        }
+
+        .section-btn {
+            position: relative;
+            left: 1000px;
+            top: -140px;
+        }
+
+        .section-5 .text {
+            padding: 10px 100px;
+        }
+        .section-5 .head h4{
+            margin-top: 0px;
+        }
+
+        .footer>div {
+            /* border: 2px solid red; */
+
+        }
+
+        .footer {
+            width: 100%;
+            /* height: 45vh; */
+            background-color: #000000;
+            color: #fff;
+            /* border: 2px solid purple; */
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 100px;
+        }
+
+        .footer .footer-logo h3 {
+            text-decoration: overline;
+            text-decoration-color: rgb(255, 255, 5);
+            color: rgb(255, 255, 5);
+            text-decoration-thickness: 3px;
+            /* text-align: center; */
+            margin-top: 15px;
+        }
+
+        footer .copyright {
+            width: 100%;
+            margin-top: 10px;
+            padding: 0px 100px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .copyright p {
+            margin-top: 20px;
+            color: #fff;
+            font-size: 13px;
+
+        }
+
+        .copyright p strong {
+            text-decoration: overline;
+            text-decoration-color: rgb(255, 255, 5);
+            color: rgb(255, 255, 5);
+            text-decoration-thickness: 3px;
+
+        }
+
+        .footer-logo,
+        .footer-privacy,
+        .footer-news {
+            width: 300px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .footer-privacy,
+        .footer-news {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            line-height: 3;
+        }
+
+        .footer-privacy a {
+            color: #fff;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            font-size: 13px;
+            text-decoration-color: rgb(255, 255, 5);
+            text-decoration-thickness: 3px;
+
+        }
+
+        input {
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 250px;
+            padding: 8px 8px;
+            border-radius: 30px;
+            color: #fff;
+        }
+
+        .input-send {
+            position: relative;
+            top: -39px;
+            left: 88px;
+            border-radius: 50%;
+            padding: 7px;
+            font-weight: 700;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h3>FIRST2CRYPTO</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="btn">Register</a></li>
+                <li><a href="#" class="btn">Login</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <hr size="px" color="gray">
+    <main>
+        <!-- hero start -->
+        <section class="hero">
+            <div class="text">
+                <h1>Buy & Sell <br> Bitcoins Easily</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis quaerat voluptatum sit aperiam
+                    minima voluptate debitis laudantium nam, beatae cupiditate quo qui dolorem odio culpa, sed atque ut
+                    enim rerum?</p>
+                <button class="btn ">Create your Account</button>
+            </div>
+            <div class="img">
+                <img src="Images/hero-img.PNG" alt="">
+            </div>
+        </section>
+        <!-- hero  end -->
+        <!-- section 1 start -->
+        <section class="section-1">
+            <div class="heading">
+                <h4>Looking For Australia's Best Crypto Exchange?</h4>
+                <h2>First2Crypto Is Here To Provide Veteran Traders And Beginner Investors With Valuable Crypto Exchange
+                    Service.</h2>
+            </div>
+            <div class="item-box">
+                <div class="items">
+                    <img src="Images/layers-.png" alt="">
+                    <h4>TrustWorthy Crypto Exchange</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, modi quibusdam sint,
+                        reiciendis consequuntur excepturi in pariatur animi cum et quisquam? Culpa nostrum sed veniam
+                        doloribus. Enim velit fugiat ipsam.</p>
+                </div>
+                <div class="items">
+                    <img src="Images/trust.png" alt="">
+                    <h4>TrustWorthy Crypto Exchange</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, modi quibusdam sint,
+                        reiciendis consequuntur excepturi in pariatur animi cum et quisquam? Culpa nostrum sed veniam
+                        doloribus. Enim velit fugiat ipsam.</p>
+                </div>
+                <div class="items">
+                    <img src="Images/24-7.png" alt="">
+                    <h4>TrustWorthy Crypto Exchange</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, modi quibusdam sint,
+                        reiciendis consequuntur excepturi in pariatur animi cum et quisquam? Culpa nostrum sed veniam
+                        doloribus. Enim velit fugiat ipsam.</p>
+                </div>
+            </div>
+            <div class="crypto">
+                <table>
+                    <tr>
+                        <th>Coin</th>
+                        <th>Price</th>
+                        <th>24H Change</th>
+                        <th>Market Cap</th>
+                    </tr>
+                    <tr>
+                        <td> <img src="Images/Bitcoin.svg.png" style="transform: rotate(-20deg);" width="20px"
+                                alt="">&nbsp;&nbsp;Bitcoin <br>
+                            <span>
+                                BTC/ USD
+                            </span>
+                        </td>
+                        <td>$19846.52</td>
+                        <td class="green-text"><img src="Images/green-.png" alt="" class="arrow"> 0.15%</td>
+                        <td>$380.12Billion</td>
+                    </tr>
+                    <tr>
+                        <td> <img src="Images/ether-removebg-preview.png" width="25px"
+                                style=" background-color: #fff; border-radius: 100%;">&nbsp;&nbsp;Ehereum <br>
+                            <span>
+                                ETH/ USD
+                            </span>
+                        </td>
+                        <td>$1422.92</td>
+                        <td class="red-text"> <img src="Images/red.png" alt="" class="arrow"> -2.91%</td>
+                        <td>$173.65Billion</td>
+                    </tr>
+                    <tr>
+                        <td> <img src="Images/tehte-removebg-preview.png" width="28px" alt="">Tether<br>
+                            <span>
+                                USDT/ USD
+                            </span>
+                        </td>
+                        <td>$1.00</td>
+                        <td class="red-text"> <img src="Images/red.png" alt="" class="arrow">-0.06%</td>
+                        <td>$67.92Billion</td>
+                    </tr>
+                    <tr>
+                        <td> <img src="Images/solana-removebg-preview.png" width="20px" alt="">&nbsp;&nbsp;Solana<br>
+                            <span>
+                                SOL/ USD
+                            </span>
+                        </td>
+                        <td>$32.80</td>
+                        <td class="green-text"> <img src="Images/green-.png" alt="" class="arrow">0.02%</td>
+                        <td>$11.61Billion</td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </section>
+        <!-- section 1 end -->
+        <!-- section 2 start -->
+        <section class="section-2">
+            <div class="img">
+
+            </div>
+            <div class="text">
+                <div class="heading">
+                    <h4>Benefits</h4>
+                    <h2>Trading with First2Crypto.</h2>
+                </div>
+                <div class="text-box">
+                    <div class="texts">
+                        <p>Get instant buy and sell orders withut any delay</p>
+                        <p>Easy to use interface with no extensive registration</p>
+                        <p>Low trading fees</p>
+                        <p>Easy to use</p>
+                        <p>Quick deposits and withdrawals</p>
+                    </div>
+                    <div class="texts">
+                        <p>Trade the top coins, ant time and anywhere</p>
+                        <p>Open 24/7,support availble 24/7</p>
+                        <p>Secure Exchange Platform</p>
+                        <p>Fast turnaround</p>
+                        <p>Access your account instantly</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 2 end -->
+        <!-- section 3 start -->
+        <section class="section-3">
+            <div class="heading">
+                <h2>Why to choose First2Crypto?</h2>
+            </div>
+            <div class="container">
+                <div class="text-boxs">
+                    <h3>Best Crypto Exchange Platform</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit magnam ullam hic aliquam
+                        facilis aut harum sapiente incidunt beatae. Sapiente maxime veniam voluptate reiciendis? Earum
+                        praesentium tempora est laboriosam laborum aspernatur. Ipsa rem ea consequuntur praesentium,
+                        aspernatur iste sit.</p>
+                </div>
+                <div class="text-boxs">
+                    <h3>Trade Whenever You Want</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit magnam ullam hic aliquam
+                        facilis aut harum sapiente incidunt beatae. Sapiente maxime veniam voluptate reiciendis? Earum
+                        praesentium tempora est laboriosam laborum aspernatur. Ipsa rem ea consequuntur praesentium,
+                        aspernatur iste sit.</p>
+                </div>
+                <div class="text-boxs">
+                    <h3>Buy Your Digital Assests from Us</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit magnam ullam hic aliquam
+                        facilis aut harum sapiente incidunt beatae. Sapiente maxime veniam voluptate reiciendis? Earum
+                        praesentium tempora est laboriosam laborum aspernatur. Ipsa rem ea consequuntur praesentium,
+                        aspernatur iste sit.</p>
+                </div>
+
+            </div>
+        </section>
+        <!-- section 3 end -->
+        <!-- section 4 start -->
+        <section class="section-4">
+            <div class="top">
+
+                <h1>Features</h1>
+                <h2>Take Your 1st Step Into the Crypto World</h2>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consectetur laboriosam quia,
+                    perferendis, ad labore vel velit fugit eaque exercitationem, voluptate quis asperiores maxime? Eum!
+                </h5>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet totam magnam optio, necessitatibus
+                    quia aliquam ipsum vero hic fuga, aliquid veritatis aspernatur molestias iure obcaecati quasi cumque
+                    praesentium quae? At?</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-items">
+                    <h3>Investing Made Easy with First2Crypto</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eum ad a commodi dolor
+                        reprehenderit veniam voluptas, corrupti dignissimos ullam eveniet corporis quas sit recusandae
+                        quia ab temporibus ex rem voluptatibus! In, eum voluptates ipsa fugit quisquam aliquid fuga
+                        illo?</p>
+                </div>
+                <div class="feature-items">
+                    <h3>withdrawals and Deposits</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eum ad a commodi dolor
+                        reprehenderit veniam voluptas, corrupti dignissimos ullam eveniet corporis quas sit recusandae
+                        quia ab temporibus ex rem voluptatibus! In, eum voluptates ipsa fugit quisquam aliquid fuga
+                        illo?</p>
+                </div>
+                <div class="feature-items">
+                    <h3>Fast and Secure Exchange</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eum ad a commodi dolor
+                        reprehenderit veniam voluptas, corrupti dignissimos ullam eveniet corporis quas sit recusandae
+                        quia ab temporibus ex rem voluptatibus! In, eum voluptates ipsa fugit quisquam aliquid fuga
+                        illo?</p>
+                </div>
+                <div class="feature-items">
+                    <h3>Trade with Peace of Mid</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eum ad a commodi dolor
+                        reprehenderit veniam voluptas, corrupti dignissimos ullam eveniet corporis quas sit recusandae
+                        quia ab temporibus ex rem voluptatibus! In, eum voluptates ipsa fugit quisquam aliquid fuga
+                        illo?</p>
+                </div>
+                <div class="feature-items">
+                    <h3>Low Fees for Crypto</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eum ad a commodi dolor
+                        reprehenderit veniam voluptas, corrupti dignissimos ullam eveniet corporis quas sit recusandae
+                        quia ab temporibus ex rem voluptatibus! In, eum voluptates ipsa fugit quisquam aliquid fuga
+                        illo?</p>
+                </div>
+            </div>
+        </section>
+        <!-- section 4 end -->
+        <section class="section-5">
+            <div class="head">
+                <h4>The Process</h4>
+            </div>
+            <div class="text">
+                <h2>How To Register At First2Crypto</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae fuga suscipit odio quod aliquam
+                    incidunt tenetur <br> explicabo officia minus! Labore? Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Eum, veniam! <br> <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptate?</p>
+                <a href="" class="btn section-btn">Registor</a>
+            </div>
+            <div class="step">
+                <span>Create An account at our <br> crypto exchange</span> <span> Verify your email address </span>
+                <span>Enter your personal <br> information & create a <br> password</span> <span>Confirm your password
+                    by <br> putting the verfication <br>code sent to you via email.</span>
+            </div>
+        </section>
+        <!-- footer start -->
+        <footer class="footer">
+            <div class="footer-logo">
+                <h3>FIRST2CRYPTO</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error porro, mollitia ducimus repellendus
+                    Dicta maiores facilis alias voluptates asperiores voluptatem.</p>
+            </div>
+            <div class="footer-privacy">
+                <h3>Legal</h3>
+                <a href="#">Cookies Policy</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Condition</a>
+
+            </div>
+            <div class="footer-news">
+                <h3>Newsletter</h3>
+                <p>keep update and connect with us</p>
+                <input type="text" placeholder="Enter Your E-mail">
+                <button class="btn input-send">Send</button>
+
+            </div>
+            <div class="copyright">
+                <p>First2Crypto is owned and operated by be First Solution PTV LTD with Registration Number <br>
+                    DCE100715169-001 at 44 Market Street, Sydney,NSW,2000,Australia.</p>
+                <p>Copyright &copy; <strong>First2Crypto </strong> 2023.All Rights Reserved</p>
+            </div>
+        </footer>
+        <!-- footer end -->
+    </main>
+
+</body>
+
+</html>
